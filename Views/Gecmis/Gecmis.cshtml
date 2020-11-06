@@ -1,0 +1,111 @@
+﻿@model IEnumerable<HesapMakinesi.Models.Gecmis>
+@using HesapMakinesi.Models;
+@{
+    ViewBag.Title = "Gecmis";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div align="center">
+        <h2>Gecmis</h2>
+        
+        <table class="table">
+            <tr>
+                <th>Tarih</th>
+                <th>Sayi 1</th>
+                <th>Sayi 2</th>
+                <th>Sonuc</th>
+                <th>İslemler</th>
+
+            </tr>
+            @foreach (Gecmis gecmis in @Model)
+            {
+        <tr>
+            <td>@gecmis.tarih</td>
+            <td>@gecmis.sayi1</td>
+            <td>@gecmis.sayi2</td>
+            <td>@gecmis.islemler</td>
+            <td>@gecmis.sonuc</td>
+        </tr>
+            }
+            </table>
+        
+    </div>
+    </body>
+</html>
+
+        <!--
+        <!DOCTYPE html>
+        <html>
+        <head>
+
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+            <style>
+                td, th {
+                    padding: 10px;
+                }
+            </style>
+        </head>
+        <body>
+
+
+                <div align="center">
+                    <h2>Calculator</h2> @using (Html.BeginForm())
+
+                    {
+                        <table>
+                            <tr>
+                                <th> Başlangıç Tarihi </th>
+                                <td> <input type="date" id="txtFirstNumber" name="firstNumber" class="form-control" /> </td>
+                            </tr>
+                            <tr>
+                                <th> Bitiş Tarihi </th>
+                                <td> <input type="date" id="txtLastNumber" name="secondNumber" class="form-control" /> </td>
+                            </tr>
+                            <tr>
+                                <th><input type="submit" name="Cal" value="Add" class="btn btn-primary" />
+                            </tr>
+                            <tr>
+                                <th>Result</th>
+                                <td><input type="text" class="form-control" value="@ViewBag.Result" /> </td>
+                                <td>
+                                    <b>tarih :</b>
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <b>sayi1 :</b>
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <b>sayi2 :</b>
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <b>islemler :</b>
+                                </td>
+                                <td>
+
+                                </td>
+                            </tr>
+                        </table>}
+
+                </div>
+
+        </body>
+        </html>
+        -->

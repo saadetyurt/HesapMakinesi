@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Hesap Makinesi";
+}
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <style>
+        td, th {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <form action="/Home/Index" method="post">
+            <h2>Hesap Makinesi</h2>@using (Html.BeginForm())
+            {
+                <table>
+                    <tr>
+                        <th> İlk Sayi </th>
+                        <td> <input type="number" id="txtFirstNumber" name="firstNumber" class="form-control" /> </td>
+                    </tr>
+                    <tr>
+                        <th> İkinci Sayi </th>
+                        <td> <input type="number" id="txtLastNumber" name="secondNumber" class="form-control" /> </td>
+                    </tr>
+                    <tr>
+                        <th><input type="submit" name="Cal" value="Add" class="btn btn-primary" />  <input type="submit" name="Cal" value="Sub" class="btn btn-primary" /> </th>
+                        <th><input type="submit" name="Cal" value="Mul" class="btn btn-primary" />  <input type="submit" name="Cal" value="Div" class="btn btn-primary" /> </th>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <th>Sonuc</th>
+                        <td><input type="number" id="txtNumber" name="txtNumber" class="form-control" value="@ViewBag.Result" /> </td>
+                    </tr>
+
+
+                </table>
+            }
+            </form>
+<!--
+        <h2>Hesap Makinesi</h2> @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <th> First Number </th>
+                    <td> <input type="text" id="txtFirstNumber" name="firstNumber" class="form-control" /> </td>
+                </tr>
+                <tr>
+                    <th> Last Number </th>
+                    <td> <input type="text" id="txtLastNumber" name="secondNumber" class="form-control" /> </td>
+                </tr>
+                <tr>
+                    <th><input type="submit" name="Cal" value="Add" class="btn btn-primary" />  <input type="submit" name="Cal" value="Sub" class="btn btn-primary" /> </th>
+                    <th>  <input type="submit" name="Cal" value="Mul" class="btn btn-primary" />   <input type="submit" name="Cal" value="Div" class="btn btn-primary" /> </th>
+                </tr>
+                <tr>
+                    <th>Result</th>
+                    <td><input type="text" class="form-control" value="@ViewBag.Result" /> </td>
+                </tr>
+            </table>}
+    -->
+    </div>
+</body>
+</html>
