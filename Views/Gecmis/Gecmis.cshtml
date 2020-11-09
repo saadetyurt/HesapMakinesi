@@ -16,8 +16,11 @@
 </head>
 <body>
     <div align="center">
-        <h2>Gecmis</h2>
-        
+        <h2>Gecmis</h2>@using (Html.BeginForm()) {
+        <input type="datetime-local" name="firstDate" value="yyyy-MM-ddThh:mm" />
+        <input type="datetime-local" name="secondDate" value="yyyy-MM-ddThh:mm" />
+        <input type="submit" name="search" value="Filtrele" />
+        }
         <table class="table">
             <tr>
                 <th>Tarih</th>
@@ -29,16 +32,16 @@
             </tr>
             @foreach (Gecmis gecmis in @Model)
             {
-        <tr>
-            <td>@gecmis.tarih</td>
-            <td>@gecmis.sayi1</td>
-            <td>@gecmis.sayi2</td>
-            <td>@gecmis.islemler</td>
-            <td>@gecmis.sonuc</td>
-        </tr>
+                <tr>
+                    <td>@gecmis.tarih</td>
+                    <td>@gecmis.sayi1</td>
+                    <td>@gecmis.sayi2</td>
+                    <td>@gecmis.islemler</td>
+                    <td>@gecmis.sonuc</td>
+                </tr>
             }
-            </table>
-        
+        </table>
+
     </div>
     </body>
 </html>

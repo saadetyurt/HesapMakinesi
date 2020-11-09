@@ -16,10 +16,9 @@ namespace HesapMakinesi.Models
     {
         public int id { get; set; }
         public System.DateTime tarih { get; set; }
-        public int sayi1 { get; set; }
-        public int sayi2 { get; set; }
-        public int islemler { get; set; }
+        public double sayi1 { get; set; }
+        public double sayi2 { get; set; }
+        public double islemler { get; set; }
         public string sonuc { get; set; }
-
     }
 }

@@ -14,6 +14,7 @@
     <EntitySetMapping Name="Gecmis">
       <EntityTypeMapping TypeName="GECMISDBModel.Gecmis">
         <MappingFragment StoreEntitySet="Gecmis">
+          <ScalarProperty Name="sonuc" ColumnName="sonuc" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="tarih" ColumnName="tarih" />
           <ScalarProperty Name="sayi1" ColumnName="sayi1" />

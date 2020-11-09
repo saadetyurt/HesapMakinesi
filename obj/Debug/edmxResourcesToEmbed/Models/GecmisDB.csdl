@@ -16,9 +16,10 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tarih" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="sayi1" Type="Int32" Nullable="false" />
-    <Property Name="sayi2" Type="Int32" Nullable="false" />
-    <Property Name="islemler" Type="Int32" Nullable="false" />
+    <Property Name="sayi1" Type="Double" Nullable="false" />
+    <Property Name="sayi2" Type="Double" Nullable="false" />
+    <Property Name="islemler" Type="Double" Nullable="false" />
+    <Property Name="sonuc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityContainer Name="GECMISDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />

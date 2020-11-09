@@ -88,3 +88,5 @@ C:\Users\saadetyurt\source\repos\HesapMakinesi\obj\Debug\HesapMakinesi.csproj.Co
 C:\Users\saadetyurt\source\repos\HesapMakinesi\obj\Debug\HesapMakinesi.csproj.CopyComplete
 C:\Users\saadetyurt\source\repos\HesapMakinesi\obj\Debug\HesapMakinesi.dll
 C:\Users\saadetyurt\source\repos\HesapMakinesi\obj\Debug\HesapMakinesi.pdb
+C:\Users\saadetyurt\source\repos\HesapMakinesi\obj\Debug\HesapMakinesi.Migrations.aaa.resources
+C:\Users\saadetyurt\source\repos\HesapMakinesi\obj\Debug\HesapMakinesi.csproj.GenerateResource.cache

@@ -18,9 +18,9 @@ namespace Calculator.Controllers
         public ActionResult Index(FormCollection form , string firstNumber, string secondNumber, string Cal, string txtNumber)
         {
             
-            int a = Convert.ToInt32(firstNumber);
-            int b = Convert.ToInt32(secondNumber);
-            int c = 0;
+            double a = double.Parse(firstNumber);
+            double b = double.Parse(secondNumber);
+            double c = 0.0;
             string d = "Toplama";
             switch (Cal)
             {
@@ -47,9 +47,9 @@ namespace Calculator.Controllers
             HesapMakinesi.Models.Gecmis model = new Gecmis();
 
             model.tarih = Convert.ToDateTime(DateTime.Now.ToString());
-            model.sayi1 = Convert.ToInt32(firstNumber);
-            model.sayi2 = Convert.ToInt32(secondNumber);
-            model.sonuc = "Toplama";
+            model.sayi1 = double.Parse(firstNumber);
+            model.sayi2 = double.Parse(secondNumber);
+            model.sonuc = sonuc;
             model.islemler = c;
             db.Gecmis.Add(model);
             db.SaveChanges();
