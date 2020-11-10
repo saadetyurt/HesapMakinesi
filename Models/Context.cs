@@ -9,7 +9,7 @@ namespace HesapMakinesi.Models
     public class Context : DbContext
     {
         public DbSet<Gecmis> Gecmises { get; set; }
-
+            
     }
 
 }

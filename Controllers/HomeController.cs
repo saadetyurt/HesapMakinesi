@@ -15,11 +15,11 @@ namespace Calculator.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(FormCollection form , string firstNumber, string secondNumber, string Cal, string txtNumber)
+        public ActionResult Index(FormCollection form , double firstNumber, double secondNumber, string Cal, string txtNumber)
         {
             
-            double a = double.Parse(firstNumber);
-            double b = double.Parse(secondNumber);
+            double a = firstNumber;
+            double b = secondNumber;
             double c = 0.0;
             string d = "Toplama";
             switch (Cal)
@@ -46,9 +46,9 @@ namespace Calculator.Controllers
             HesapMakinesi.Models.GECMISDBEntities db = new GECMISDBEntities();
             HesapMakinesi.Models.Gecmis model = new Gecmis();
 
-            model.tarih = Convert.ToDateTime(DateTime.Now.ToString());
-            model.sayi1 = double.Parse(firstNumber);
-            model.sayi2 = double.Parse(secondNumber);
+            model.tarih = Convert.ToDateTime(DateTime.Now.ToString("g"));
+            model.sayi1 = firstNumber;
+            model.sayi2 = secondNumber;
             model.sonuc = sonuc;
             model.islemler = c;
             db.Gecmis.Add(model);

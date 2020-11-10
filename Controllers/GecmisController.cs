@@ -25,16 +25,13 @@ namespace HesapMakinesi.Controllers
             HesapMakinesi.Models.GECMISDBEntities db = new GECMISDBEntities();
             HesapMakinesi.Models.Gecmis model = new Gecmis();
             DateTime a = DateTime.Parse(firstDate);
-            var gecmis = from s in db.Gecmis select s;
+            DateTime b = DateTime.Parse(secondDate);
 
-            if (!String.IsNullOrEmpty(firstDate))
-            {
-                gecmis = gecmis.Where(s => s.tarih.GetDateTimeFormats().Contains(firstDate));
-                
-            }
+            var gecmis = db.Gecmis.Where(s => s.tarih >= a && s.tarih =< b);
+             
             Context context = new Context();
-            IEnumerable< Gecmis> gecmiss = gecmis.ToList();
-            return View(gecmiss);
+           // IEnumerable< Gecmis> gecmiss = db.Gecmis.ToList();
+            return View(gecmis);
         } 
 
     }
