@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div align="center">
+    <div align="center"> <!--form baslatıldı ve de usıng sayesınde kapatma ıslemıne gerek kalmadı-->
         <h2>Gecmis</h2>@using (Html.BeginForm()) {
         <input type="datetime-local" name="firstDate" value="yyyy/M/dd hh:mm" />
         <input type="datetime-local" name="secondDate" value="yyyy/M/dd hh:mm" />
@@ -45,70 +45,3 @@
     </div>
     </body>
 </html>
-
-        <!--
-        <!DOCTYPE html>
-        <html>
-        <head>
-
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-            <style>
-                td, th {
-                    padding: 10px;
-                }
-            </style>
-        </head>
-        <body>
-
-
-                <div align="center">
-                    <h2>Calculator</h2> @using (Html.BeginForm())
-
-                    {
-                        <table>
-                            <tr>
-                                <th> Başlangıç Tarihi </th>
-                                <td> <input type="date" id="txtFirstNumber" name="firstNumber" class="form-control" /> </td>
-                            </tr>
-                            <tr>
-                                <th> Bitiş Tarihi </th>
-                                <td> <input type="date" id="txtLastNumber" name="secondNumber" class="form-control" /> </td>
-                            </tr>
-                            <tr>
-                                <th><input type="submit" name="Cal" value="Add" class="btn btn-primary" />
-                            </tr>
-                            <tr>
-                                <th>Result</th>
-                                <td><input type="text" class="form-control" value="@ViewBag.Result" /> </td>
-                                <td>
-                                    <b>tarih :</b>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <b>sayi1 :</b>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <b>sayi2 :</b>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <b>islemler :</b>
-                                </td>
-                                <td>
-
-                                </td>
-                            </tr>
-                        </table>}
-
-                </div>
-
-        </body>
-        </html>
-        -->

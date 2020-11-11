@@ -12,6 +12,7 @@ namespace HesapMakinesi.Models
     using System;
     using System.Collections.Generic;
     
+    
     public partial class Gecmis
     {
         public int id { get; set; }

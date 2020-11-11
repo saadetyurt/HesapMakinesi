@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using HesapMakinesi.Models;
 using System.Collections;
-using myAliasName = System.Collections.Generic.List<int>;
+
 
 namespace HesapMakinesi.Controllers
 {
@@ -29,8 +29,6 @@ namespace HesapMakinesi.Controllers
 
             var gecmis = db.Gecmis.Where(s => s.tarih >= a && s.tarih =< b);
              
-            Context context = new Context();
-           // IEnumerable< Gecmis> gecmiss = db.Gecmis.ToList();
             return View(gecmis);
         } 
 

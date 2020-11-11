@@ -15,9 +15,9 @@ namespace Calculator.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(FormCollection form , double firstNumber, double secondNumber, string Cal, string txtNumber)
+        public ActionResult Index(double firstNumber, double secondNumber, string Cal)
         {
-            
+
             double a = firstNumber;
             double b = secondNumber;
             double c = 0.0;
@@ -40,12 +40,14 @@ namespace Calculator.Controllers
                     c = a / b;
                     d = "Bölme";
                     break;
-            }
+            }//viewbag cont dakı result degıskenının vıew de gorunmesını saglar
             ViewBag.Result = c;
             string  sonuc = d;
+
+           //obje olusturma
             HesapMakinesi.Models.GECMISDBEntities db = new GECMISDBEntities();
             HesapMakinesi.Models.Gecmis model = new Gecmis();
-
+            //db ye yazdırma
             model.tarih = Convert.ToDateTime(DateTime.Now.ToString("g"));
             model.sayi1 = firstNumber;
             model.sayi2 = secondNumber;
